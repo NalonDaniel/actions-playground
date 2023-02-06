@@ -1,1 +1,43 @@
+name: "Exercício 1 06022023"
 
+on:
+  push:
+  
+jobs:
+  print_date_ubuntu:
+    name: Data do Ubuntu
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Data do Ubuntu
+        run: date
+        
+  print_date_windows:
+    name: Data do Windows
+    runs-on: windows-latest
+    
+    steps:
+      - name: Data do Windows
+        run: date
+        
+  print_date_mac:
+    name: Data do MacOS
+    runs-on: mac-latest
+    
+    steps:
+      - name: Data do MacOS
+        run: date
+        
+  print_date_final:
+    name: Data Final
+    runs-on: ubuntu-latest
+    
+    needs:
+      - print_date_ubuntu
+      - print_date_windows
+      - print_date_mac
+      
+    steps:
+      - name: Data Final
+        run: date
+    
