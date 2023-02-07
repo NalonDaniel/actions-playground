@@ -2,7 +2,7 @@ name: "Exercicio2 06022023"
 
 on: [push]
   
-  jobs:
+jobs:
   
     cria_e_upload_artefato:
       name: "Cria o artefato e faz o upload"
