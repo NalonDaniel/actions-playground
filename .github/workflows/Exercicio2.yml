@@ -1,6 +1,6 @@
 name: "Exercicio2 06022023"
 
-on: push
+on: [push]
   
   jobs:
   
