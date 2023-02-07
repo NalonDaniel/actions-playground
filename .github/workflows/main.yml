@@ -22,7 +22,7 @@ jobs:
         
   print_date_mac:
     name: Data do MacOS
-    runs-on: mac-latest
+    runs-on: macos-latest
     
     steps:
       - name: Data do MacOS
