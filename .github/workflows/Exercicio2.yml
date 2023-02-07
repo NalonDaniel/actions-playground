@@ -3,12 +3,19 @@ name: "Exercicio2 06022023"
 on: push
   
   jobs:
+  
     cria_e_upload_artefato:
       name: "Cria o artefato e faz o upload"
-      
       runs-on: ubuntu-latest
       
       steps:
       
         - name: Checkout repositpry
           uses: actions/checkout@v3.3.0
+          
+        - name: Upload a Build Artifact
+          uses: actins/upload-artifact@v3.1.2
+          with:
+            name: repositorio_nalon
+            path: .
+            retention-days: 15
